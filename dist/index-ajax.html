@@ -1,0 +1,29 @@
+<div class="ix-news-tx">
+    <div class="ix-news-list ix-news-arrow u-slick">
+        <div class="item"><a href="news-detail.html" class="ix-news-a">
+            <h2 class="tx tx1">置信荣获“2017中国房地产综合开发专业领先品牌价值TOP10”</h2>
+            <p class="tx tx2">由国务院发展研究中心企业研究所、清华大学房地产研究所和中国指数研究院主办的“2017中国房地产品牌价地产研究...</p>
+        </a></div>
+        <div class="item"><a href="news-detail.html" class="ix-news-a">
+            <h2 class="tx tx1">置信荣获“2017中国房地产综合开发专业领先品牌价值TOP10”</h2>
+            <p class="tx tx2">由国务院发展研究中心企业研究所、清华大学房地产研究所和中国指数研究院主办的“2017中国房地产品牌价地产研究...</p>
+        </a></div>
+    </div>
+    <p class="ix-news-count"><span class="cnum">01</span>&nbsp;/&nbsp;<span class="anum">01</span></p>
+    <script>
+        var maxnum = $('.ix-news-list .item').length;
+        if (maxnum < 10 && maxnum > 0) {
+            maxnum = '0' + maxnum;
+        }
+        $('.ix-news-count .anum').html(maxnum);
+        $('.ix-news-list').slick({
+            vertical: true
+        }).on('beforeChange', function(event, slick, currentSlide, nextSlide){
+            var minnum = nextSlide + 1;
+            if (minnum < 10 && minnum > 0) {
+                minnum = '0' + minnum;
+            }
+            $('.ix-news-count .cnum').html(minnum);
+        });
+    </script>
+</div>
